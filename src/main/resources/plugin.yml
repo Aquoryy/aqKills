@@ -1,0 +1,13 @@
+name: aqKills
+version: '${project.version}'
+main: org.aqu0ryy.kills.Loader
+
+api-version: '1.16'
+softdepend: [ Vault ]
+
+author: aqu0ryy
+description: Плагин на убийство игроков.
+
+commands:
+  aqkills:
+    aliases: [ kills, aqk ]

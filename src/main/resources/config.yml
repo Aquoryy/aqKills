@@ -1,0 +1,21 @@
+balance-percent: 0.05 # Процент денег от баланса жертвы.
+error-percent: '&cПроцент не может быть больше 1 и меньше 0, установлено стандратное значение.'
+
+for-killer:
+  message: '&eВы убили игрока &a{victim} &eи получили с него &6{money}$'
+  sound: 'ENTITY_PLAYER_LEVELUP 1 1' # Звук Громкость Частота.
+for-victim:
+  message: '&eВас убил игрок &a{killer} &eи вы потеряли &6{money}$'
+  sound: 'ENTITY_CAT_DEATH 1 1' # Звук Громкость Частота.
+
+messages:
+  no-permission: '&cУ вас недостаточно прав.'
+  no-arg: '&cТакого аргумента не существует.'
+  help:
+    - ''
+    - ' &c/{label} reload &7- Перезагрузить конфиги.'
+    - ''
+
+commands:
+  reload:
+    success: '&aКонфиги перезагружены.'
