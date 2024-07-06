@@ -39,7 +39,7 @@ public class Commands implements CommandExecutor, TabCompleter {
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, @NotNull String[] args) {
         if (args.length == 1) {
             List<String> list = new ArrayList<>();
-            if (sender.hasPermission("aqwelcome.admin")) {
+            if (sender.hasPermission("aqkills.admin")) {
                 list.add("reload");
             }
             return list;
