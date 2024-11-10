@@ -3,7 +3,7 @@ version: '${project.version}'
 main: org.aqu0ryy.kills.Loader
 
 api-version: '1.16'
-softdepend: [ Vault ]
+softdepend: [ Vault, PlayerPoints, TokenManager ]
 
 author: aqu0ryy
 description: Плагин на убийство игроков.

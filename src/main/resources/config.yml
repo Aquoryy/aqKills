@@ -1,5 +1,8 @@
 balance-percent: 0.05 # Процент денег от баланса жертвы.
-error-percent: '&cПроцент не может быть больше 1 и меньше 0, установлено стандратное значение.'
+error-percent: '&cПроцент не может быть больше 1 и меньше 0.'
+
+economy: vault # Доступно: vault, playerpoints, tokenmanager.
+error-economy: '&cДанный тип экономики {economy} не найден или недоступен.'
 
 for-killer:
   message: '&eВы убили игрока &a{victim} &eи получили с него &6{money}$'

@@ -1,23 +1,28 @@
-package org.aqu0ryy.kills.utils;
+package org.aqu0ryy.kills.api;
 
 import net.milkbowl.vault.economy.Economy;
-import net.milkbowl.vault.economy.EconomyResponse;
 import org.aqu0ryy.kills.Loader;
+import org.aqu0ryy.kills.utils.ChatUtil;
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
-public class VaultUtil {
+public class VaultApi {
 
     private static Economy economy = null;
 
-    public static boolean setupEconomy() {
+    public static boolean setupVault() {
         if (Loader.getInst().getServer().getPluginManager().getPlugin("Vault") == null) {
+            ChatUtil.sendMessage(Bukkit.getConsoleSender(), "&c[" + Loader.getInst().getDescription().getName() + "] Не установлен Vault, опция этой экономики недоступна.");
             return false;
         }
+
         RegisteredServiceProvider<Economy> rsp = Loader.getInst().getServer().getServicesManager().getRegistration(Economy.class);
+
         if (rsp == null) {
             return false;
         }
+
         economy = rsp.getProvider();
         return true;
     }
@@ -26,11 +31,11 @@ public class VaultUtil {
         return (int) economy.getBalance(player);
     }
 
-    public static EconomyResponse removeBalance(OfflinePlayer player, double money) {
-        return economy.withdrawPlayer(player, money);
+    public static void removeBalance(OfflinePlayer player, double money) {
+        economy.withdrawPlayer(player, money);
     }
 
-    public static EconomyResponse addBalance(OfflinePlayer player, double money) {
-        return economy.depositPlayer(player, money);
+    public static void addBalance(OfflinePlayer player, double money) {
+        economy.depositPlayer(player, money);
     }
 }

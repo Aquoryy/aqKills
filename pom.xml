@@ -6,7 +6,7 @@
 
   <groupId>org.aqu0ryy.kills</groupId>
   <artifactId>aqKills</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
 
   <name>aqKills</name>
@@ -63,6 +63,10 @@
           <id>jitpack.io</id>
           <url>https://jitpack.io</url>
       </repository>
+      <repository>
+          <id>rosewood-repo</id>
+          <url>https://repo.rosewooddev.io/repository/public/</url>
+      </repository>
   </repositories>
 
   <dependencies>
@@ -77,6 +81,23 @@
           <artifactId>VaultAPI</artifactId>
           <version>1.7.1</version>
           <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.black_ixx</groupId>
+          <artifactId>playerpoints</artifactId>
+          <version>3.2.7</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.github.Realizedd</groupId>
+          <artifactId>TokenManager</artifactId>
+          <version>3.2.4</version>
+          <exclusions>
+              <exclusion>
+                  <groupId>*</groupId>
+                  <artifactId>*</artifactId>
+              </exclusion>
+          </exclusions>
       </dependency>
   </dependencies>
 </project>
